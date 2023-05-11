@@ -31,5 +31,4 @@ object Game  {
     fun isDraw(from: String, to: String): Boolean = from == to
 
     fun isWin(from: String, to: String): Boolean = rules["$from=$to"]!!
-
 }

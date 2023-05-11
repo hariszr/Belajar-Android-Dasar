@@ -7,12 +7,12 @@ object Game  {
     private val options = listOf("ROCK", "SCISSORS", "PAPER")
 
     private val optionsDrawable = mapOf(
-        "ROCK" to R.drawable.Rock,
-        "SCISSORS" to R.drawable.Scissors,
-        "PAPER" to R.drawable.Paper,
-        "LOSE" to R.drawable.Lose,
-        "WIN" to R.drawable.Win,
-        "QUESTION" to R.drawable.Question,
+        "ROCK" to R.drawable.rock,
+        "SCISSORS" to R.drawable.scissors,
+        "PAPER" to R.drawable.paper,
+        "LOSE" to R.drawable.lose,
+        "WIN" to R.drawable.win,
+        "QUESTION" to R.drawable.question,
     )
 
     private val rules = mapOf(
@@ -30,5 +30,5 @@ object Game  {
 
     fun isDraw(from: String, to: String): Boolean = from == to
 
-    fun isWin(from: String, to: String): Boolean = rules["$from=$to"]!!
+    fun isWin(from: String, to: String): Boolean = rules["$from-$to"]!!
 }
